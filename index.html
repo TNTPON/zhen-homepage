@@ -118,6 +118,15 @@
     font-size:13px; line-height:1.7; color:var(--sub);
   }
   footer{max-width:980px; margin:0 auto; padding:30px 22px 60px; font-size:13px; color:var(--sub); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap}
+  /* ---------- video ---------- */
+  .video-card{
+    margin-top:36px; background:var(--card); border:1px solid rgba(0,0,0,.05);
+    border-radius:var(--radius); box-shadow:0 2px 12px rgba(0,0,0,.04); padding:28px;
+  }
+  .video-card video{display:block; width:100%; height:auto; border-radius:12px; background:#000}
+  .video-meta{margin-top:16px; display:flex; align-items:baseline; gap:14px; flex-wrap:wrap}
+  .video-meta h3{font-size:20px; font-weight:700; letter-spacing:-.01em}
+  .video-meta span{font-size:14px; color:var(--sub)}
   /* ---------- reveal ---------- */
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease}
   .reveal.in{opacity:1; transform:none}
@@ -138,6 +147,7 @@
 <nav>
   <div class="nav-inner">
     <a class="logo" href="#">Zhen</a>
+    <a class="nav-link" href="#video">Video</a>
     <a class="nav-link" href="#backtest">Backtest</a>
     <a class="nav-link" href="#about">About</a>
     <div class="spacer"></div>
@@ -155,6 +165,21 @@
     <a class="btn ghost" href="https://x.com/OpenZhen" target="_blank" rel="noopener">Follow on X</a>
   </div>
 </header>
+
+<section id="video">
+  <div class="kicker reveal">Watch · 2 min</div>
+  <h2 class="reveal">The backtest, in two minutes</h2>
+  <p class="lede reveal">What six and a half years of backtesting did to <b>$1,000</b> — the numbers, the curve, the coins. <b>Results only, no method.</b></p>
+  <div class="video-card reveal">
+    <video controls preload="metadata" poster="video-poster.jpg" src="three-filter-backtest.mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-meta">
+      <h3>Three-Filter Backtest — 2:00</h3>
+      <span>中文讲解 · Chinese narration · 2020–2026</span>
+    </div>
+  </div>
+</section>
 
 <section id="backtest">
   <div class="kicker reveal">Backtest · 2020 — 2026</div>
